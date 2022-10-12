@@ -24,6 +24,8 @@ class Seccion(models.Model):
 
 
 class Articulo(models.Model):
+    def __str__(self):
+        return self.titulo, self.fecha
 
     titulo = models.CharField(max_length=150)
     texto = models.CharField(max_length=150)
