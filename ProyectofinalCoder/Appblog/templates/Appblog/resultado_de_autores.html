@@ -1,0 +1,22 @@
+{% extends "Appblog/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+<p>Estamos buscando de los autores: {{ autor }}</p>
+
+<ul>
+    <ul>
+
+        {% for autor in autor_encontrados %}
+        
+        <li>
+            {{ autor }} 
+        </li>
+        
+        {% endfor %}
+    </ul>
+
+    {% endblock %}

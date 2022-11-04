@@ -1,0 +1,10 @@
+{% extends "Appblog/padre.html" %}
+{% block contenidoQueCambia %}
+<h4>Editar perfil : <i>{{ user }}</i></h4>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <a class="btn btn-primary" value="Aceptar">Aceptar </a>
+</form>
+<br>
+{% endblock %}

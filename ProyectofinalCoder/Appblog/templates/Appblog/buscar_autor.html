@@ -1,0 +1,14 @@
+{% extends "Appblog/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h3> - Busqueda de autor de cursos por apellido  - </h3>
+
+<form action="/Appblog/buscar-autor" method="GET">
+    <p><input type="name" name="autor" id="autor"></p>
+    <input type="submit" value="Buscar">
+</form>
+
+{% endblock %}

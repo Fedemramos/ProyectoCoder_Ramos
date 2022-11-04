@@ -1,0 +1,17 @@
+{% extends "Appblog/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h4>Completa los datos para registrarte</h4>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br><br>
+    
+    <button type="submit" name="submit">registrarse</button>
+</form> <br>
+
+
+{% endblock %}

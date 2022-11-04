@@ -1,0 +1,12 @@
+{% extends "Appblog/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h3>Curso:</h3>  
+<p>Nombre del curso: <strong>{{ curso.nombre }}</strong> </p>
+<p>camada: <i> {{ curso.camada }}</i></p>
+<br><br>
+<a class="btn btn-primary" href="{% url 'CursoList' %}">Mis Cursos</a><br>
+{% endblock %}

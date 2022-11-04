@@ -1,0 +1,16 @@
+{% extends "Appblog/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h3> - Busca la comision del curso - </h3>
+
+<form action="/Appblog/buscar-2" method="GET">
+    <p><input type="number" name="camada" id="camada"></p>
+    <input type="submit" value="Ir a buscar!">
+</form>
+
+{% endblock %}
+
+

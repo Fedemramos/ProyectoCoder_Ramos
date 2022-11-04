@@ -4,8 +4,38 @@
 
 {% block contenidoQueCambia %}
 
-<h1>INICIO</h1>
-<p>Bienvenido a la pagina</p>
-<h3>descubri nuevos campos, que expandan tus conocimientos</h3>
+
+<h2>Bienvenidos a mi proyecto!</h2>
+
+
+<a class="btn btn-primary" href="{% url 'CursoList' %}">Mis Cursos</a>
+<a class="btn btn-primary" href="{% url 'CursoList' %}">Busquedas de curso</a>
+
+
+{% if not request.user.is_authenticated %}
+<nav class="navbar navbar-light bg-light static-top">
+<div class="container">
+<a class="btn btn-primary" href="{% url 'Login' %}">Login</a>
+<a class="btn btn-primary" href="{% url 'Register' %}">Registrarse</a>
+{% endif %}
+
+{% if request.user.is_authenticated %}
+<a class="btn btn-primary" href="{% url 'EditarPerfil' %}">Editar Perfil</a>
+<a class="btn btn-primary" href="{% url 'AgregarAvatar' %}">Agregar Avatar</a>
+<a class="btn btn-primary" href="{% url 'about' %}">About</a></p>
+
+  {% if avatar %}
+    <img height="120px" src="{{ avatar }}"/>
+    {% endif %}</p>
+    <h5>HOLA, {{ user.username }}!!</h5></p>
+    {% endif %}
+
+
+
+<h2></h2>
+
+{% if mensaje %}
+{{ mensaje }}
+{% endif %}
 
 {% endblock %}

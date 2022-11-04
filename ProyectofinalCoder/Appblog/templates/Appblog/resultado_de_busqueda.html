@@ -1,0 +1,21 @@
+{% extends "Appblog/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<p>Estamos buscando la comision: {{ camada }}</p>
+
+{% if cursos_encontrados %}
+--CURSOS DEL BLOG--
+<ul>
+{% for cursos in cursos_encontrados %}
+    <li>{{cursos.nombre}} (comision {{cursos.camada}})</li>
+{% endfor %}
+</ul>
+
+{% endif %}
+
+<a class="btn btn-primary" href="{% url 'CursoList' %}">volver a cursos</a>
+
+{% endblock %}
