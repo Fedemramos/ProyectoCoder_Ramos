@@ -4,7 +4,10 @@
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <a class="btn btn-primary" value="Aceptar">Aceptar </a>
+    <input type="submit" value="Submit" />
 </form>
+<br>
+
+<h6>Importante: para realizar la ediccion asegurarse de que el perfil cuente con un avatar.</h6>  
 <br>
 {% endblock %}
